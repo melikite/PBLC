@@ -4,7 +4,6 @@ body, html {
   padding: 0;
   overflow: hidden;
   height: 100%;
-  background: linear-gradient(to bottom, #00008b, #000033); /* Dark blue gradient */
 }
 
 /* Style the glowing text */
@@ -17,16 +16,33 @@ body, html {
   font-size: 3vw; /* Responsive font size */
   color: #00ffff; /* Light blue text color */
   text-shadow: 
+   text-shadow: 
+text-shadow: 
     0 0 5px #00ffff, /* Slight glow */
     0 0 10px rgba(0, 255, 255, 0.5); /* Subtle outer glow */
   text-align: center; /* Center the text */
   white-space: nowrap; /* Prevent text from wrapping */
   z-index: 1000; /* Ensure the text is above other elements */
+}
+.glowing-text {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
   padding: 10px 20px; /* Add some padding */
   border-radius: 10px; /* Rounded corners */
 }
-
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(to bottom, #00008b, #000033); /* Dark blue gradient */
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(to bottom, #00008b, #000033); /* Dark blue gradient */
+}
 .hearts-container {
   position: fixed;
   top: 0;
@@ -42,7 +58,7 @@ body, html {
   width: 30px;
   height: 30px;
   background-color: purple;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Corrected clip-path for a heart shape */
+  clip-path: path("M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z");
   animation: float 5s infinite;
   transform-origin: center;
 }
@@ -53,7 +69,7 @@ body, html {
     opacity: 1;
   }
   100% {
-    transform: translate(calc(100vw * -0.5), calc(100vh * -0.5)) rotate(360deg);
+    transform: translate(calc(100vw * -0.5), calc(100vh * 0.5)) rotate(360deg);
     opacity: 0;
   }
 }
@@ -83,3 +99,4 @@ body, html {
 }
 
 /* Add more hearts with unique delays and positions */
+
