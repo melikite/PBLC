@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            background-color: black; /* Dark background for glow effect */
+            color: white;
+            overflow: hidden;
+        }
+
+        .gif-container {
+            margin-bottom: 20px;
+            margin-top: 140px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #noBtn {
+            position: relative;
+        }
+
+        /* Glowing Text */
+        .glowing-text {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3vw;
+            color: #00ffff;
+            text-shadow: 
+                0 0 5px #00ffff, 
+                0 0 10px rgba(0, 255, 255, 0.8),
+                0 0 20px rgba(0, 255, 255, 0.6), 
+                0 0 40px rgba(0, 255, 255, 0.4);
+            text-align: center;
+            white-space: nowrap;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glowing Text -->
+    <div class="glowing-text">WILL YOU BE MY VALENTINE? 💜</div>
+
+    <!-- GIF -->
+    <div class="gif-container">
+        <img src="https://media1.tenor.com/m/3xQS2T-Jqw4AAAAC/my-melody-kuromi.gif" alt="Milk and Mocha Hugging">
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button onclick="window.open('https://codepen.io/KrispyKr3m/full/NWVdmbz?editors=1000', '_blank')">Yes</button>
+        <button id="noBtn" onmouseover="moveNoButton()">No</button>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+
+    <!-- JavaScript (Placed at the bottom) -->
+    <script>
+        function moveNoButton() {
+            const button = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
