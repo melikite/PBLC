@@ -10,10 +10,11 @@
             font-family: Arial, sans-serif;
             margin-top: 50px;
         }
-        .gif-container {
-            margin-bottom: 20px; /* Space below the GIF */
-            margin-top: 140px;    /* Adds space above the GIF (if needed) */
-        }
+       .gif-container {
+    margin-bottom: 20px; /* Space below the GIF */
+    margin-top: 140px;    /* Adds space above the GIF (if needed) */
+}
+
         .buttons {
             display: flex;
             justify-content: center;
@@ -27,14 +28,56 @@
         #noBtn {
             position: relative;
         }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://media1.tenor.com/m/3xQS2T-Jqw4AAAAC/my-melody-kuromi.gif" alt="Milk and Mocha Hugging">
+    </div>
+    <div class="buttons">
+        <!-- "Yes" button now links to Pen 2 -->
+       <button onclick="window.open('https://codepen.io/KrispyKr3m/full/NWVdmbz?editors=1000', '_blank')">Yes</button>
+
+        <button id="noBtn" onmouseover="moveNoButton()">No</button>
+    </div>
+
+    <script>
+        function moveNoButton() {
+            const button = document.getElementById('noBtn');
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            button.style.position = 'absolute';
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    
+  </script>
+<div class="glowing-text">
+WILL YOU BE MY VALENTINE? 💜
+
+<div class="hearts-container">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+</div>
+
+<!-- Add more heart divs if needed -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Text Effect</title>
+    <style>
         /* Ensure the body takes up the full viewport */
-        html, body {
+        body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
             height: 100%;
             background-color: black; /* Dark background for better glow effect */
         }
+
         /* Style the glowing text */
         .glowing-text {
             position: fixed; /* Keep the text at the top of the screen */
@@ -52,54 +95,13 @@
             text-align: center; /* Center the text */
             white-space: nowrap; /* Prevent text from wrapping */
             z-index: 1000; /* Ensure the text is above other elements */
+
             background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
             padding: 10px 20px; /* Add some padding */
             border-radius: 10px; /* Rounded corners */
         }
-        /* Add heart styles here */
-        .hearts-container {
-            display: flex; /* Example styling for heart container */
-            justify-content: center;
-            margin-top: 20px;
-        }
-        .heart {
-            width: 20px; /* Example size for hearts */
-            height: 20px;
-            background-color: purple; /* Heart color */
-            margin: 5px; /* Space between hearts */
-            border-radius: 0%; /* Make them circular */
-        }
     </style>
 </head>
 <body>
-    <div class="gif-container">
-        <img src="https://media1.tenor.com/m/3xQS2T-Jqw4AAAAC/my-melody-kuromi.gif" alt="Milk and Mocha Hugging">
-    </div>
-    <div class="buttons">
-        <button onclick="window.open('https://codepen.io/KrispyKr3m/full/NWVdmbz?editors=1000', '_blank')">Yes</button>
-        <button id="noBtn" onmouseover="moveNoButton()">No</button>
-    </div>
 
-    <script>
-        function moveNoButton() {
-            const button = document.getElementById('noBtn');
-            const x = Math.random() * (window.innerWidth - 100);
-            const y = Math.random() * (window.innerHeight - 100);
-            button.style.position = 'absolute';
-            button.style.left = `${x}px`;
-            button.style.top = `${y}px`;
-        }
-    </script>
-
-    <div class="glowing-text">
-        WILL YOU BE MY VALENTINE? 💜
-    </div>
-
-    <div class="hearts-container">
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-    </div>
-</body>
-</html>
+  
